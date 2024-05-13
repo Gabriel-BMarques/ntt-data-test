@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); // Fonte similar à Netflix
+
+.header {
+    background-color: #e50914; // Cor de fundo vermelho Netflix
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    font-family: 'Bebas Neue', sans-serif; // Fonte personalizada
+    color: white;
+    font-size: 48px;
+}
