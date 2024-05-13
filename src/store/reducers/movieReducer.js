@@ -5,7 +5,7 @@ import {
   } from '../actions/movieActions';
   
   const initialState = {
-    movies: [],
+    movies: null,
     loading: false,
     error: null,
   };
@@ -28,7 +28,7 @@ import {
       case SEARCH_MOVIES_FAILURE:
         return {
           ...state,
-          movies: [],
+          movies: null,
           loading: false,
           error: action.payload,
         };

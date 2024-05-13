@@ -1,0 +1,31 @@
+.movie-info-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.actor-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.favorite-button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: auto;
+}

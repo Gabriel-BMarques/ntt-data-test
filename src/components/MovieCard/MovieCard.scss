@@ -1,0 +1,18 @@
+ui5-card {
+    h2 {
+        padding-bottom: 2rem;
+    }
+
+    p {
+        width: 100%;
+        display: flex;
+        padding: 1rem 0;
+        align-items: center;
+        font-weight: 400;
+    }
+
+    img {
+        border-radius:8px;
+        object-fit: cover;
+    }
+}
