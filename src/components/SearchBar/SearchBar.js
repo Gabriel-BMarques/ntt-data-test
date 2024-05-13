@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Button from '../Button/Button';
 
 function SearchBar({
     handleSubmit,
@@ -18,9 +19,9 @@ function SearchBar({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
       />
-      <button onClick={handleSubmit} disabled={loading}>
+      <Button onClick={handleSubmit} disabled={loading}>
         {loading ? 'Searching...' : 'Search'}
-      </button>
+      </Button>
       {error && <div>Error: {error}</div>}
     </div>
   );

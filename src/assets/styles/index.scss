@@ -1,0 +1,42 @@
+@import './colors';
+
+:root {
+  --primary-color: $primary;
+  --secondary-color: $secondary;
+  --white-color: $white;
+  --gray-color: $gray;
+  --light-gray-color: $lightGray;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.ui5-button {
+    --sapButtonBackground: $primary;
+    --sapButtonTextColor: $white;
+    --sapButtonBorderColor: $primary;
+    --sapButtonHoverBackground: darken($primary, 10%);
+    --sapButtonActiveBackground: darken($primary, 20%);
+    --sapButtonFontFamily: 'Roboto', sans-serif;
+    --sapButtonFontSize: 16px;
+    --sapButtonPadding: 12px 24px;
+    --sapButtonBorderRadius: 5px;
+    --sapButtonBoxShadow: none;
+    --sapButtonDisabledBackground: $lightGray;
+    --sapButtonDisabledTextColor: $gray;
+    --sapButtonDisabledBorderColor: $lightGray;
+    --sapButtonDisabledOpacity: 0.7;
+}
