@@ -6,6 +6,7 @@ import './SearchBar.scss';
 
 function SearchBar({
     handleSubmit,
+    handleReset,
     placeholder,
     onChange,
     value
@@ -21,6 +22,9 @@ function SearchBar({
       />
       <Button onClick={handleSubmit} disabled={loading}>
         {loading ? 'Searching...' : 'Search'}
+      </Button>
+      <Button onClick={handleReset}>
+        Reset
       </Button>
     </div>
   );

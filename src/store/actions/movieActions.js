@@ -15,3 +15,7 @@ export const searchMoviesFailure = (error) => ({
   type: SEARCH_MOVIES_FAILURE,
   payload: error,
 });
+
+export const clearMovies = () => ({
+  type: 'CLEAR_MOVIES',
+});

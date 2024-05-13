@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { searchMoviesRequest, searchMoviesSuccess, searchMoviesFailure } from '../../store/actions/movieActions';
+import { searchMoviesRequest, searchMoviesSuccess, searchMoviesFailure, clearMovies } from '../../store/actions/movieActions';
 import { searchMovies } from '../../services/movieService';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import MovieItem from '../../components/MovieItem/MovieItem';
 
 function Home() {
     const [query, setQuery] = useState('');
@@ -19,13 +20,22 @@ function Home() {
         }
     };
 
+    const handleReset = () => {
+        dispatch(clearMovies());
+        setQuery('');
+    }
+
     return (
-        <SearchBar
-            handleSubmit={handleSearch}
-            placeholder={'Buscas filmes, séries, etc.'}
-            onChange={setQuery}
-            value={query}
-        />
+        <>
+            <SearchBar
+                handleSubmit={handleSearch}
+                handleReset={handleReset}
+                placeholder={'Buscas filmes, séries, etc.'}
+                onChange={setQuery}
+                value={query}
+            />
+            <MovieItem />
+        </>
     );
 }
 

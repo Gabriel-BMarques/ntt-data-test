@@ -32,6 +32,8 @@ import {
           loading: false,
           error: action.payload,
         };
+      case 'CLEAR_MOVIES':
+        return initialState
       default:
         return state;
     }
