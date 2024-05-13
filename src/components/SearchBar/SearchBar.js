@@ -1,23 +1,29 @@
-// movieService.js
-import axios from 'axios';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-const axiosInstance = axios.create({
-  baseURL: 'http://localhost:4000',
-});
+function SearchBar({
+    handleSubmit,
+    placeholder,
+    onChange,
+    value
+}) {
+  const loading = useSelector((state) => state.movie.loading);
+  const error = useSelector((state) => state.movie.error);
 
-const searchMovies = async (query) => {
-  try {
-    const response = await axiosInstance.get('/', {
-      params: {
-        title: query,
-      },
-    });
-
-    return response.data;
-  } catch (error) {
-    console.error('Error searching movies:', error);
-    return [];
-  }
+  return (
+    <div>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+      />
+      <button onClick={handleSubmit} disabled={loading}>
+        {loading ? 'Searching...' : 'Search'}
+      </button>
+      {error && <div>Error: {error}</div>}
+    </div>
+  );
 };
 
-export { searchMovies };
+export default SearchBar;
