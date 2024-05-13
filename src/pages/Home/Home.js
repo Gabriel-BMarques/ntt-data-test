@@ -22,6 +22,7 @@ function Home() {
     return (
         <SearchBar
             handleSubmit={handleSearch}
+            placeholder={'Buscas filmes, séries, etc.'}
             onChange={setQuery}
             value={query}
         />

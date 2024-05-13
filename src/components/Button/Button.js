@@ -1,9 +1,9 @@
 import React from 'react';
 import '@ui5/webcomponents/dist/Button';
 
-function Button({ children, onClick, disabled }) {
+function Button({ children, onClick }) {
   return (
-    <ui5-button onClick={onClick} disabled={disabled}>{children}</ui5-button>
+    <ui5-button onClick={onClick}>{children}</ui5-button>
   );
 }
 

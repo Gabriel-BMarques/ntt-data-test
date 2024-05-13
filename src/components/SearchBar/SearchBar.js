@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Button from '../Button/Button';
+import '@ui5/webcomponents/dist/Input';
+import './SearchBar.scss';
 
 function SearchBar({
     handleSubmit,
@@ -9,20 +11,17 @@ function SearchBar({
     value
 }) {
   const loading = useSelector((state) => state.movie.loading);
-  const error = useSelector((state) => state.movie.error);
 
   return (
-    <div>
-      <input
-        type="text"
+    <div className='search-container'>
+      <ui5-input
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onInput={(e) => onChange(e.target.value)}
         placeholder={placeholder}
       />
       <Button onClick={handleSubmit} disabled={loading}>
         {loading ? 'Searching...' : 'Search'}
       </Button>
-      {error && <div>Error: {error}</div>}
     </div>
   );
 };

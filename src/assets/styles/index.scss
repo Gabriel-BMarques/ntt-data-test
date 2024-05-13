@@ -6,13 +6,13 @@
   --white-color: $white;
   --gray-color: $gray;
   --light-gray-color: $lightGray;
+  --background-color: #000000;
+  --text-color: #333333;
 }
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background-color);
@@ -24,19 +24,43 @@ code {
         monospace;
 }
 
-.ui5-button {
-    --sapButtonBackground: $primary;
-    --sapButtonTextColor: $white;
-    --sapButtonBorderColor: $primary;
-    --sapButtonHoverBackground: darken($primary, 10%);
-    --sapButtonActiveBackground: darken($primary, 20%);
-    --sapButtonFontFamily: 'Roboto', sans-serif;
-    --sapButtonFontSize: 16px;
-    --sapButtonPadding: 12px 24px;
-    --sapButtonBorderRadius: 5px;
-    --sapButtonBoxShadow: none;
-    --sapButtonDisabledBackground: $lightGray;
-    --sapButtonDisabledTextColor: $gray;
-    --sapButtonDisabledBorderColor: $lightGray;
-    --sapButtonDisabledOpacity: 0.7;
+ui5-button {
+    min-width: 250px;
+    background-color: #E50914 !important;
+    color: white !important;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    padding: 8px 0 !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s, box-shadow 0.3s !important;
+    opacity: 1;
+  
+    &:hover {
+      background-color: #f40612 !important;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+      cursor: pointer;
+    }
+}
+
+ui5-input {
+    width: 100%;
+    background-color: #333 !important;
+    color: white !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 16px !important;
+    border-radius: 4px !important;
+    border: 1px solid #555 !important;
+    padding: 8px 10px !important;
+  
+    &::part(input) {
+      color: white !important;
+    }
+  
+    &::part(input):focus {
+      box-shadow: 0 0 8px #E50914 !important;
+      outline: none !important;
+    }
 }
