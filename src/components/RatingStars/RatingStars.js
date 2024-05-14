@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactStars from "react-rating-stars-component";
+import Rating from '@mui/material/Rating';
 
 function RatingStars({ ratings }) {
     const [rating, setRating] = useState(calculateAverageRating());
@@ -17,22 +17,18 @@ function RatingStars({ ratings }) {
         });
     
         const average = total / ratings.length;
-        return average.toFixed(2);
+        return average;
     }
     
     useEffect(() => {
-        setRating(calculateAverageRating)
+        setRating(calculateAverageRating())
         // eslint-disable-next-line
     }, [ratings])
 
     return (
-        <ReactStars
-            count={5}
+        <Rating
             value={rating / 20}
-            size={24}
-            isHalf={true}
-            edit={false}
-            activeColor="#ffd700"
+            precision={0.1}
         />
     );
 }
