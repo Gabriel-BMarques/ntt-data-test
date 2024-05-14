@@ -1,3 +1,4 @@
+import React from 'react';
 import '@ui5/webcomponents/dist/Card';
 import '@ui5/webcomponents/dist/Button';
 import '@ui5/webcomponents/dist/Table';
@@ -10,7 +11,7 @@ function MovieCard({ title, plot, actors, poster, ratings }) {
         <ui5-card>
             <ui5-table hide-no-data>
                 <ui5-table-column slot='columns'>
-                    <h2>{ title }</h2>
+                    <h1>{title}</h1>
                     <p>{ plot }</p>
                     <p><b>Actors:</b> { actors }</p>
                     <p><b>Review:</b> <RatingStars ratings={ratings} /></p>
