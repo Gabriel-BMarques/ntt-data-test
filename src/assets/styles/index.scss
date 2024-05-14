@@ -43,6 +43,10 @@ ui5-button {
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
       cursor: pointer;
     }
+
+    &:after {
+      border: none;
+    }
 }
 
 ui5-input {

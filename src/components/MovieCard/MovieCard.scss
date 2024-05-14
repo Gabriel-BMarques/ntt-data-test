@@ -17,4 +17,9 @@ ui5-card {
         width: 300px;
         height: 450px;
     }
+
+    .favorite-button-label {
+        display: flex;
+        align-items: center;
+    }
 }
